@@ -35,27 +35,44 @@ struct ContentView: View {
                 .background(.blue)
             }
         }
-//        .foregroundColor(.white)
-//        .frame(height: 35)
-//        .frame(maxWidth: .infinity)
-//        .background(.blue)
-//        .padding()
+
     }
 }
 
 struct TransitionView : View {
+    @State private var isSheetPresented = false
     
     init() {
         print("TransitionView init")
     }
     
     var body: some View {
+        NavigationView {
+            VStack {
+                Button("다음") {
+                    isSheetPresented = true
+                }
+            }
+            .sheet(isPresented: $isSheetPresented, content: {
+                OtherView()
+            })
+        }
+    }
+}
+
+struct OtherView : View {
+    
+    init() {
+        print("OtherView init")
+    }
+    
+    var body: some View {
         Text("🍟화면전환테스트🍟")
             .onAppear{
-                print("TransitionView onAppear")
+                print("OtherView onAppear")
             }
             .onDisappear{
-                print("TransitionView onDisappear")
+                print("OtherView onDisappear")
             }
     }
 }
