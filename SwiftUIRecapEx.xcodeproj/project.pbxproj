@@ -11,6 +11,7 @@
 		D8FEDE292C861FAF00ADDDB1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FEDE282C861FAF00ADDDB1 /* ContentView.swift */; };
 		D8FEDE2B2C861FB000ADDDB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FEDE2A2C861FB000ADDDB1 /* Assets.xcassets */; };
 		D8FEDE2E2C861FB000ADDDB1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8FEDE2D2C861FB000ADDDB1 /* Preview Assets.xcassets */; };
+		D8FEDE452C876ED800ADDDB1 /* CoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FEDE442C876ED800ADDDB1 /* CoinView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		D8FEDE282C861FAF00ADDDB1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D8FEDE2A2C861FB000ADDDB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8FEDE2D2C861FB000ADDDB1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D8FEDE442C876ED800ADDDB1 /* CoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				D8FEDE282C861FAF00ADDDB1 /* ContentView.swift */,
 				D8FEDE2A2C861FB000ADDDB1 /* Assets.xcassets */,
 				D8FEDE2C2C861FB000ADDDB1 /* Preview Content */,
+				D8FEDE442C876ED800ADDDB1 /* CoinView.swift */,
 			);
 			path = SwiftUIRecapEx;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FEDE452C876ED800ADDDB1 /* CoinView.swift in Sources */,
 				D8FEDE292C861FAF00ADDDB1 /* ContentView.swift in Sources */,
 				D8FEDE272C861FAF00ADDDB1 /* SwiftUIRecapExApp.swift in Sources */,
 			);
