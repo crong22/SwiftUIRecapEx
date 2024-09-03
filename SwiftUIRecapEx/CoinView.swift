@@ -12,15 +12,15 @@ struct CoinView: View {
         NavigationView {
             ScrollView {
                 ZStack{
-                    bannerView()
+                    roundRectangle()
                 }
                 .navigationTitle("My Money")
-                    }
             }
         }
     }
     
-    func bannerView() -> some View{
+    func roundRectangle() -> some View{
+        ZStack{
         RoundedRectangle(cornerRadius: 25)
             .fill(.blue)
             .frame(height: 150)
@@ -29,13 +29,19 @@ struct CoinView: View {
                 Circle()
                     .fill(.white.opacity(0.4))
                     .scaleEffect(2)
-                VStack(alignment: .leading) {
-                    Spacer()
-                    Text("나의 쇼핑내역")
-                    Text("154,140,420")
-                }
-                .padding(25)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            }
+            VStack(alignment: .leading) {
+                Spacer()
+                Text("나의 쇼핑내역")
+                    .font(.caption.bold())
+                Text("154,140,420")
+                    .font(.largeTitle.bold())
+            }
+            .foregroundColor(.white)
+            .padding(25)
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+            
     }
 }
 
