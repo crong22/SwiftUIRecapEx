@@ -11,8 +11,16 @@ struct CoinView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ZStack{
-                    roundRectangle()
+                roundRectangle()
+                
+                ForEach(0..<6) {_ in
+                    HStack {
+                        VStack(alignment :.leading) {
+                            Text("비트코인")
+                            Text("KRW-BTC")
+                        }
+                        Spacer()
+                    }
                 }
                 .navigationTitle("My Money")
             }
