@@ -10,7 +10,7 @@ import SwiftUI
 struct RandomView: View {
     
     let url = URL(string: "https://picsum.photos/120/160")
-    
+     
     @State var listname = [
         TitleName(name: "첫번째"),
         TitleName(name: "두번째"),
@@ -25,6 +25,9 @@ struct RandomView: View {
                 ScrollView {
                     ForEach(listname, id: \.id) { data in
                         imageView(num: data.name! )
+                    }
+                    .onAppear() {
+                        print("2222\(name)")
                     }
             }
         }
@@ -52,9 +55,15 @@ struct RandomView: View {
                                     }
                                     .clipShape(RoundedRectangle(cornerRadius: 25))
                                 Text(num)
-                                TextField("변경 값 입력 \(name)", text: $name)
-                                    .frame(width: 300, height: 30)
-                                    .border(Color.black, width: 2)
+                                TextField("변경 값 입력", text: $name)
+                                    .padding(.horizontal)
+                                    .frame(width: 300, height: 30, alignment: .leading)
+                                    .background(Color.white)
+                                    .cornerRadius(15)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .stroke(Color.black, lineWidth: 2)
+                                    )
                                     .textCase(.lowercase)
                                     .autocapitalization(.none)
                                     .disableAutocorrection(false)
